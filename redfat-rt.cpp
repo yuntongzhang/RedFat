@@ -107,7 +107,7 @@ static REDFAT_NOINLINE REDFAT_NORETURN void redfat_error(const char *format, ...
     va_start(ap, format);
     redfat_message(format, REDFAT_MESSAGE_ERROR, ap);
     va_end(ap);
-    abort();
+    exit(1);
 }
 
 /*
